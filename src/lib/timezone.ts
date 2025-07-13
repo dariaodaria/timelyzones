@@ -343,7 +343,9 @@ export function searchCities(query: string): City[] {
   // Cleanup old cache entries
   if (searchCache.size > 100) {
     const firstKey = searchCache.keys().next().value
-    searchCache.delete(firstKey)
+    if (firstKey) {
+      searchCache.delete(firstKey)
+    }
   }
   
   return results
