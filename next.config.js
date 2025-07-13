@@ -5,9 +5,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   
-  // PERFORMANCE FIX: Experimental optimizations
+  // PERFORMANCE FIX: Experimental optimizations (disabled problematic ones)
   experimental: {
-    optimizeCss: true,
+    // optimizeCss: true, // Disabled - causing critters module error
     optimizeServerReact: true,
     serverMinification: true,
     serverSourceMaps: false,
