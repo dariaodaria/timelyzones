@@ -108,11 +108,11 @@ export function GoogleAnalytics({ gaId }: { gaId: string }) {
 // Performance monitoring component
 export function PerformanceMonitor() {
   useEffect(() => {
-    // Track Core Web Vitals
-    if ('web-vital' in window) {
-      return
-    }
-
+    // Track Core Web Vitals - Disabled for deployment
+    // TODO: Add web-vitals package and re-enable
+    console.log('📊 Performance monitoring loaded (web-vitals disabled for deployment)')
+    
+    /*
     const trackWebVital = (metric: any) => {
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', metric.name, {
@@ -132,6 +132,7 @@ export function PerformanceMonitor() {
       onLCP(trackWebVital)
       onTTFB(trackWebVital)
     })
+    */
   }, [])
 
   return null
