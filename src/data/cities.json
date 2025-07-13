@@ -1,0 +1,1217 @@
+[
+  {
+    "id": "new-york",
+    "name": "New York",
+    "country": "United States",
+    "timezone": "America/New_York",
+    "coordinates": { "lat": 40.7128, "lng": -74.0060 },
+    "population": 8419000,
+    "isCapital": false
+  },
+  {
+    "id": "washington-dc",
+    "name": "Washington DC",
+    "country": "United States",
+    "timezone": "America/New_York",
+    "coordinates": { "lat": 38.9072, "lng": -77.0369 },
+    "population": 705749,
+    "isCapital": true
+  },
+  {
+    "id": "los-angeles",
+    "name": "Los Angeles",
+    "country": "United States",
+    "timezone": "America/Los_Angeles",
+    "coordinates": { "lat": 34.0522, "lng": -118.2437 },
+    "population": 3971000,
+    "isCapital": false
+  },
+  {
+    "id": "chicago",
+    "name": "Chicago",
+    "country": "United States",
+    "timezone": "America/Chicago",
+    "coordinates": { "lat": 41.8781, "lng": -87.6298 },
+    "population": 2716000,
+    "isCapital": false
+  },
+  {
+    "id": "denver",
+    "name": "Denver",
+    "country": "United States",
+    "timezone": "America/Denver",
+    "coordinates": { "lat": 39.7392, "lng": -104.9903 },
+    "population": 715522,
+    "isCapital": false
+  },
+  {
+    "id": "phoenix",
+    "name": "Phoenix",
+    "country": "United States",
+    "timezone": "America/Phoenix",
+    "coordinates": { "lat": 33.4484, "lng": -112.0740 },
+    "population": 1608139,
+    "isCapital": false
+  },
+  {
+    "id": "atlanta",
+    "name": "Atlanta",
+    "country": "United States",
+    "timezone": "America/New_York",
+    "coordinates": { "lat": 33.7490, "lng": -84.3880 },
+    "population": 498715,
+    "isCapital": false
+  },
+  {
+    "id": "miami",
+    "name": "Miami",
+    "country": "United States",
+    "timezone": "America/New_York",
+    "coordinates": { "lat": 25.7617, "lng": -80.1918 },
+    "population": 470914,
+    "isCapital": false
+  },
+  {
+    "id": "seattle",
+    "name": "Seattle",
+    "country": "United States",
+    "timezone": "America/Los_Angeles",
+    "coordinates": { "lat": 47.6062, "lng": -122.3321 },
+    "population": 753675,
+    "isCapital": false
+  },
+  {
+    "id": "vancouver",
+    "name": "Vancouver",
+    "country": "Canada",
+    "timezone": "America/Vancouver",
+    "coordinates": { "lat": 49.2827, "lng": -123.1207 },
+    "population": 675218,
+    "isCapital": false
+  },
+  {
+    "id": "toronto",
+    "name": "Toronto",
+    "country": "Canada",
+    "timezone": "America/Toronto",
+    "coordinates": { "lat": 43.6532, "lng": -79.3832 },
+    "population": 2794000,
+    "isCapital": false
+  },
+  {
+    "id": "ottawa",
+    "name": "Ottawa",
+    "country": "Canada",
+    "timezone": "America/Toronto",
+    "coordinates": { "lat": 45.4215, "lng": -75.6972 },
+    "population": 994837,
+    "isCapital": true
+  },
+  {
+    "id": "montreal",
+    "name": "Montreal",
+    "country": "Canada",
+    "timezone": "America/Toronto",
+    "coordinates": { "lat": 45.5017, "lng": -73.5673 },
+    "population": 1780000,
+    "isCapital": false
+  },
+  {
+    "id": "calgary",
+    "name": "Calgary",
+    "country": "Canada",
+    "timezone": "America/Edmonton",
+    "coordinates": { "lat": 51.0447, "lng": -114.0719 },
+    "population": 1336000,
+    "isCapital": false
+  },
+  {
+    "id": "mexico-city",
+    "name": "Mexico City",
+    "country": "Mexico",
+    "timezone": "America/Mexico_City",
+    "coordinates": { "lat": 19.4326, "lng": -99.1332 },
+    "population": 9209944,
+    "isCapital": true
+  },
+  {
+    "id": "sao-paulo",
+    "name": "São Paulo",
+    "country": "Brazil",
+    "timezone": "America/Sao_Paulo",
+    "coordinates": { "lat": -23.5505, "lng": -46.6333 },
+    "population": 12252023,
+    "isCapital": false
+  },
+  {
+    "id": "brasilia",
+    "name": "Brasília",
+    "country": "Brazil",
+    "timezone": "America/Sao_Paulo",
+    "coordinates": { "lat": -15.7939, "lng": -47.8828 },
+    "population": 3055149,
+    "isCapital": true
+  },
+  {
+    "id": "rio-de-janeiro",
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "timezone": "America/Sao_Paulo",
+    "coordinates": { "lat": -22.9068, "lng": -43.1729 },
+    "population": 6718903,
+    "isCapital": false
+  },
+  {
+    "id": "buenos-aires",
+    "name": "Buenos Aires",
+    "country": "Argentina",
+    "timezone": "America/Argentina/Buenos_Aires",
+    "coordinates": { "lat": -34.6118, "lng": -58.3960 },
+    "population": 3075646,
+    "isCapital": true
+  },
+  {
+    "id": "santiago",
+    "name": "Santiago",
+    "country": "Chile",
+    "timezone": "America/Santiago",
+    "coordinates": { "lat": -33.4489, "lng": -70.6693 },
+    "population": 6257516,
+    "isCapital": true
+  },
+  {
+    "id": "lima",
+    "name": "Lima",
+    "country": "Peru",
+    "timezone": "America/Lima",
+    "coordinates": { "lat": -12.0464, "lng": -77.0428 },
+    "population": 10719000,
+    "isCapital": true
+  },
+  {
+    "id": "bogota",
+    "name": "Bogotá",
+    "country": "Colombia",
+    "timezone": "America/Bogota",
+    "coordinates": { "lat": 4.7110, "lng": -74.0721 },
+    "population": 7181469,
+    "isCapital": true
+  },
+  {
+    "id": "caracas",
+    "name": "Caracas",
+    "country": "Venezuela",
+    "timezone": "America/Caracas",
+    "coordinates": { "lat": 10.4806, "lng": -66.9036 },
+    "population": 2923959,
+    "isCapital": true
+  },
+  {
+    "id": "london",
+    "name": "London", 
+    "country": "United Kingdom",
+    "timezone": "Europe/London",
+    "coordinates": { "lat": 51.5074, "lng": -0.1278 },
+    "population": 8982000,
+    "isCapital": true
+  },
+  {
+    "id": "paris",
+    "name": "Paris",
+    "country": "France",
+    "timezone": "Europe/Paris",
+    "coordinates": { "lat": 48.8566, "lng": 2.3522 },
+    "population": 2141000,
+    "isCapital": true
+  },
+  {
+    "id": "berlin",
+    "name": "Berlin",
+    "country": "Germany",
+    "timezone": "Europe/Berlin",
+    "coordinates": { "lat": 52.5200, "lng": 13.4050 },
+    "population": 3669000,
+    "isCapital": true
+  },
+  {
+    "id": "rome",
+    "name": "Rome",
+    "country": "Italy",
+    "timezone": "Europe/Rome",
+    "coordinates": { "lat": 41.9028, "lng": 12.4964 },
+    "population": 2873000,
+    "isCapital": true
+  },
+  {
+    "id": "madrid",
+    "name": "Madrid",
+    "country": "Spain",
+    "timezone": "Europe/Madrid",
+    "coordinates": { "lat": 40.4168, "lng": -3.7038 },
+    "population": 3223000,
+    "isCapital": true
+  },
+  {
+    "id": "amsterdam",
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "timezone": "Europe/Amsterdam",
+    "coordinates": { "lat": 52.3676, "lng": 4.9041 },
+    "population": 872680,
+    "isCapital": true
+  },
+  {
+    "id": "brussels",
+    "name": "Brussels",
+    "country": "Belgium",
+    "timezone": "Europe/Brussels",
+    "coordinates": { "lat": 50.8503, "lng": 4.3517 },
+    "population": 1208542,
+    "isCapital": true
+  },
+  {
+    "id": "vienna",
+    "name": "Vienna",
+    "country": "Austria",
+    "timezone": "Europe/Vienna",
+    "coordinates": { "lat": 48.2082, "lng": 16.3738 },
+    "population": 1911728,
+    "isCapital": true
+  },
+  {
+    "id": "zurich",
+    "name": "Zurich",
+    "country": "Switzerland",
+    "timezone": "Europe/Zurich",
+    "coordinates": { "lat": 47.3769, "lng": 8.5417 },
+    "population": 415367,
+    "isCapital": false
+  },
+  {
+    "id": "stockholm",
+    "name": "Stockholm",
+    "country": "Sweden",
+    "timezone": "Europe/Stockholm",
+    "coordinates": { "lat": 59.3293, "lng": 18.0686 },
+    "population": 975551,
+    "isCapital": true
+  },
+  {
+    "id": "copenhagen",
+    "name": "Copenhagen",
+    "country": "Denmark",
+    "timezone": "Europe/Copenhagen",
+    "coordinates": { "lat": 55.6761, "lng": 12.5683 },
+    "population": 1346485,
+    "isCapital": true
+  },
+  {
+    "id": "oslo",
+    "name": "Oslo",
+    "country": "Norway",
+    "timezone": "Europe/Oslo",
+    "coordinates": { "lat": 59.9139, "lng": 10.7522 },
+    "population": 1036059,
+    "isCapital": true
+  },
+  {
+    "id": "helsinki",
+    "name": "Helsinki",
+    "country": "Finland",
+    "timezone": "Europe/Helsinki",
+    "coordinates": { "lat": 60.1699, "lng": 24.9384 },
+    "population": 658864,
+    "isCapital": true
+  },
+  {
+    "id": "reykjavik",
+    "name": "Reykjavik",
+    "country": "Iceland",
+    "timezone": "Atlantic/Reykjavik",
+    "coordinates": { "lat": 64.1466, "lng": -21.9426 },
+    "population": 131136,
+    "isCapital": true
+  },
+  {
+    "id": "dublin",
+    "name": "Dublin",
+    "country": "Ireland",
+    "timezone": "Europe/Dublin",
+    "coordinates": { "lat": 53.3498, "lng": -6.2603 },
+    "population": 1387964,
+    "isCapital": true
+  },
+  {
+    "id": "lisbon",
+    "name": "Lisbon",
+    "country": "Portugal",
+    "timezone": "Europe/Lisbon",
+    "coordinates": { "lat": 38.7223, "lng": -9.1393 },
+    "population": 547733,
+    "isCapital": true
+  },
+  {
+    "id": "warsaw",
+    "name": "Warsaw",
+    "country": "Poland",
+    "timezone": "Europe/Warsaw",
+    "coordinates": { "lat": 52.2297, "lng": 21.0122 },
+    "population": 1790658,
+    "isCapital": true
+  },
+  {
+    "id": "prague",
+    "name": "Prague",
+    "country": "Czech Republic",
+    "timezone": "Europe/Prague",
+    "coordinates": { "lat": 50.0755, "lng": 14.4378 },
+    "population": 1357326,
+    "isCapital": true
+  },
+  {
+    "id": "budapest",
+    "name": "Budapest",
+    "country": "Hungary",
+    "timezone": "Europe/Budapest",
+    "coordinates": { "lat": 47.4979, "lng": 19.0402 },
+    "population": 1768073,
+    "isCapital": true
+  },
+  {
+    "id": "bucharest",
+    "name": "Bucharest",
+    "country": "Romania",
+    "timezone": "Europe/Bucharest",
+    "coordinates": { "lat": 44.4268, "lng": 26.1025 },
+    "population": 1883425,
+    "isCapital": true
+  },
+  {
+    "id": "sofia",
+    "name": "Sofia",
+    "country": "Bulgaria",
+    "timezone": "Europe/Sofia",
+    "coordinates": { "lat": 42.6977, "lng": 23.3219 },
+    "population": 1405296,
+    "isCapital": true
+  },
+  {
+    "id": "athens",
+    "name": "Athens",
+    "country": "Greece",
+    "timezone": "Europe/Athens",
+    "coordinates": { "lat": 37.9838, "lng": 23.7275 },
+    "population": 3154152,
+    "isCapital": true
+  },
+  {
+    "id": "moscow",
+    "name": "Moscow",
+    "country": "Russia",
+    "timezone": "Europe/Moscow",
+    "coordinates": { "lat": 55.7558, "lng": 37.6173 },
+    "population": 12506468,
+    "isCapital": true
+  },
+  {
+    "id": "st-petersburg",
+    "name": "St. Petersburg",
+    "country": "Russia",
+    "timezone": "Europe/Moscow",
+    "coordinates": { "lat": 59.9311, "lng": 30.3609 },
+    "population": 5383890,
+    "isCapital": false
+  },
+  {
+    "id": "istanbul",
+    "name": "Istanbul",
+    "country": "Turkey",
+    "timezone": "Europe/Istanbul",
+    "coordinates": { "lat": 41.0082, "lng": 28.9784 },
+    "population": 15519267,
+    "isCapital": false
+  },
+  {
+    "id": "ankara",
+    "name": "Ankara",
+    "country": "Turkey",
+    "timezone": "Europe/Istanbul",
+    "coordinates": { "lat": 39.9334, "lng": 32.8597 },
+    "population": 5663322,
+    "isCapital": true
+  },
+  {
+    "id": "zagreb",
+    "name": "Zagreb",
+    "country": "Croatia",
+    "timezone": "Europe/Zagreb",
+    "coordinates": { "lat": 45.8150, "lng": 15.9819 },
+    "population": 790017,
+    "isCapital": true
+  },
+  {
+    "id": "belgrade",
+    "name": "Belgrade",
+    "country": "Serbia",
+    "timezone": "Europe/Belgrade",
+    "coordinates": { "lat": 44.7866, "lng": 20.4489 },
+    "population": 1378682,
+    "isCapital": true
+  },
+  {
+    "id": "ljubljana",
+    "name": "Ljubljana",
+    "country": "Slovenia",
+    "timezone": "Europe/Ljubljana",
+    "coordinates": { "lat": 46.0569, "lng": 14.5058 },
+    "population": 295504,
+    "isCapital": true
+  },
+  {
+    "id": "kiev",
+    "name": "Kyiv",
+    "country": "Ukraine",
+    "timezone": "Europe/Kiev",
+    "coordinates": { "lat": 50.4501, "lng": 30.5234 },
+    "population": 2967360,
+    "isCapital": true
+  },
+  {
+    "id": "cairo",
+    "name": "Cairo",
+    "country": "Egypt",
+    "timezone": "Africa/Cairo",
+    "coordinates": { "lat": 30.0444, "lng": 31.2357 },
+    "population": 9200000,
+    "isCapital": true
+  },
+  {
+    "id": "casablanca",
+    "name": "Casablanca",
+    "country": "Morocco",
+    "timezone": "Africa/Casablanca",
+    "coordinates": { "lat": 33.5731, "lng": -7.5898 },
+    "population": 3359818,
+    "isCapital": false
+  },
+  {
+    "id": "rabat",
+    "name": "Rabat",
+    "country": "Morocco",
+    "timezone": "Africa/Casablanca",
+    "coordinates": { "lat": 34.0209, "lng": -6.8417 },
+    "population": 580000,
+    "isCapital": true
+  },
+  {
+    "id": "tunis",
+    "name": "Tunis",
+    "country": "Tunisia",
+    "timezone": "Africa/Tunis",
+    "coordinates": { "lat": 36.8065, "lng": 10.1815 },
+    "population": 638845,
+    "isCapital": true
+  },
+  {
+    "id": "algiers",
+    "name": "Algiers",
+    "country": "Algeria",
+    "timezone": "Africa/Algiers",
+    "coordinates": { "lat": 36.7372, "lng": 3.0863 },
+    "population": 2364230,
+    "isCapital": true
+  },
+  {
+    "id": "lagos",
+    "name": "Lagos",
+    "country": "Nigeria",
+    "timezone": "Africa/Lagos",
+    "coordinates": { "lat": 6.5244, "lng": 3.3792 },
+    "population": 14862000,
+    "isCapital": false
+  },
+  {
+    "id": "abuja",
+    "name": "Abuja",
+    "country": "Nigeria",
+    "timezone": "Africa/Lagos",
+    "coordinates": { "lat": 9.0765, "lng": 7.3986 },
+    "population": 3278000,
+    "isCapital": true
+  },
+  {
+    "id": "accra",
+    "name": "Accra",
+    "country": "Ghana",
+    "timezone": "Africa/Accra",
+    "coordinates": { "lat": 5.6037, "lng": -0.1870 },
+    "population": 2557000,
+    "isCapital": true
+  },
+  {
+    "id": "nairobi",
+    "name": "Nairobi",
+    "country": "Kenya",
+    "timezone": "Africa/Nairobi",
+    "coordinates": { "lat": -1.2921, "lng": 36.8219 },
+    "population": 4922000,
+    "isCapital": true
+  },
+  {
+    "id": "addis-ababa",
+    "name": "Addis Ababa",
+    "country": "Ethiopia",
+    "timezone": "Africa/Addis_Ababa",
+    "coordinates": { "lat": 9.1450, "lng": 38.7451 },
+    "population": 3352000,
+    "isCapital": true
+  },
+  {
+    "id": "johannesburg",
+    "name": "Johannesburg",
+    "country": "South Africa",
+    "timezone": "Africa/Johannesburg",
+    "coordinates": { "lat": -26.2041, "lng": 28.0473 },
+    "population": 4803262,
+    "isCapital": false
+  },
+  {
+    "id": "cape-town",
+    "name": "Cape Town",
+    "country": "South Africa",
+    "timezone": "Africa/Johannesburg",
+    "coordinates": { "lat": -33.9249, "lng": 18.4241 },
+    "population": 4618000,
+    "isCapital": true
+  },
+  {
+    "id": "riyadh",
+    "name": "Riyadh",
+    "country": "Saudi Arabia",
+    "timezone": "Asia/Riyadh",
+    "coordinates": { "lat": 24.7136, "lng": 46.6753 },
+    "population": 7676654,
+    "isCapital": true
+  },
+  {
+    "id": "dubai",
+    "name": "Dubai",
+    "country": "United Arab Emirates",
+    "timezone": "Asia/Dubai",
+    "coordinates": { "lat": 25.2048, "lng": 55.2708 },
+    "population": 3331420,
+    "isCapital": false
+  },
+  {
+    "id": "abu-dhabi",
+    "name": "Abu Dhabi",
+    "country": "United Arab Emirates",
+    "timezone": "Asia/Dubai",
+    "coordinates": { "lat": 24.2992, "lng": 54.6975 },
+    "population": 1482816,
+    "isCapital": true
+  },
+  {
+    "id": "doha",
+    "name": "Doha",
+    "country": "Qatar",
+    "timezone": "Asia/Qatar",
+    "coordinates": { "lat": 25.2760, "lng": 51.5200 },
+    "population": 2382000,
+    "isCapital": true
+  },
+  {
+    "id": "kuwait-city",
+    "name": "Kuwait City",
+    "country": "Kuwait",
+    "timezone": "Asia/Kuwait",
+    "coordinates": { "lat": 29.3759, "lng": 47.9774 },
+    "population": 4270563,
+    "isCapital": true
+  },
+  {
+    "id": "manama",
+    "name": "Manama",
+    "country": "Bahrain",
+    "timezone": "Asia/Bahrain",
+    "coordinates": { "lat": 26.2285, "lng": 50.5860 },
+    "population": 650604,
+    "isCapital": true
+  },
+  {
+    "id": "muscat",
+    "name": "Muscat",
+    "country": "Oman",
+    "timezone": "Asia/Muscat",
+    "coordinates": { "lat": 23.5880, "lng": 58.3829 },
+    "population": 1560000,
+    "isCapital": true
+  },
+  {
+    "id": "tehran",
+    "name": "Tehran",
+    "country": "Iran",
+    "timezone": "Asia/Tehran",
+    "coordinates": { "lat": 35.6944, "lng": 51.4215 },
+    "population": 8896000,
+    "isCapital": true
+  },
+  {
+    "id": "baghdad",
+    "name": "Baghdad",
+    "country": "Iraq",
+    "timezone": "Asia/Baghdad",
+    "coordinates": { "lat": 33.3152, "lng": 44.3661 },
+    "population": 7216000,
+    "isCapital": true
+  },
+  {
+    "id": "damascus",
+    "name": "Damascus",
+    "country": "Syria",
+    "timezone": "Asia/Damascus",
+    "coordinates": { "lat": 33.5138, "lng": 36.2765 },
+    "population": 2320000,
+    "isCapital": true
+  },
+  {
+    "id": "beirut",
+    "name": "Beirut",
+    "country": "Lebanon",
+    "timezone": "Asia/Beirut",
+    "coordinates": { "lat": 33.8938, "lng": 35.5018 },
+    "population": 2200000,
+    "isCapital": true
+  },
+  {
+    "id": "amman",
+    "name": "Amman",
+    "country": "Jordan",
+    "timezone": "Asia/Amman",
+    "coordinates": { "lat": 31.9454, "lng": 35.9284 },
+    "population": 4007526,
+    "isCapital": true
+  },
+  {
+    "id": "jerusalem",
+    "name": "Jerusalem",
+    "country": "Israel",
+    "timezone": "Asia/Jerusalem",
+    "coordinates": { "lat": 31.7683, "lng": 35.2137 },
+    "population": 936425,
+    "isCapital": true
+  },
+  {
+    "id": "tel-aviv",
+    "name": "Tel Aviv",
+    "country": "Israel",
+    "timezone": "Asia/Jerusalem",
+    "coordinates": { "lat": 32.0853, "lng": 34.7818 },
+    "population": 460613,
+    "isCapital": false
+  },
+  {
+    "id": "delhi",
+    "name": "Delhi",
+    "country": "India",
+    "timezone": "Asia/Kolkata",
+    "coordinates": { "lat": 28.7041, "lng": 77.1025 },
+    "population": 32900000,
+    "isCapital": true
+  },
+  {
+    "id": "mumbai",
+    "name": "Mumbai",
+    "country": "India",
+    "timezone": "Asia/Kolkata",
+    "coordinates": { "lat": 19.0760, "lng": 72.8777 },
+    "population": 20411000,
+    "isCapital": false
+  },
+  {
+    "id": "bangalore",
+    "name": "Bangalore",
+    "country": "India",
+    "timezone": "Asia/Kolkata",
+    "coordinates": { "lat": 12.9716, "lng": 77.5946 },
+    "population": 13608000,
+    "isCapital": false
+  },
+  {
+    "id": "kolkata",
+    "name": "Kolkata",
+    "country": "India",
+    "timezone": "Asia/Kolkata",
+    "coordinates": { "lat": 22.5726, "lng": 88.3639 },
+    "population": 15133000,
+    "isCapital": false
+  },
+  {
+    "id": "chennai",
+    "name": "Chennai",
+    "country": "India",
+    "timezone": "Asia/Kolkata",
+    "coordinates": { "lat": 13.0827, "lng": 80.2707 },
+    "population": 11324000,
+    "isCapital": false
+  },
+  {
+    "id": "hyderabad",
+    "name": "Hyderabad",
+    "country": "India",
+    "timezone": "Asia/Kolkata",
+    "coordinates": { "lat": 17.3850, "lng": 78.4867 },
+    "population": 10494000,
+    "isCapital": false
+  },
+  {
+    "id": "pune",
+    "name": "Pune",
+    "country": "India",
+    "timezone": "Asia/Kolkata",
+    "coordinates": { "lat": 18.5204, "lng": 73.8567 },
+    "population": 7764000,
+    "isCapital": false
+  },
+  {
+    "id": "islamabad",
+    "name": "Islamabad",
+    "country": "Pakistan",
+    "timezone": "Asia/Karachi",
+    "coordinates": { "lat": 33.7294, "lng": 73.0931 },
+    "population": 1015000,
+    "isCapital": true
+  },
+  {
+    "id": "karachi",
+    "name": "Karachi",
+    "country": "Pakistan",
+    "timezone": "Asia/Karachi",
+    "coordinates": { "lat": 24.8607, "lng": 67.0011 },
+    "population": 16094000,
+    "isCapital": false
+  },
+  {
+    "id": "lahore",
+    "name": "Lahore",
+    "country": "Pakistan",
+    "timezone": "Asia/Karachi",
+    "coordinates": { "lat": 31.5804, "lng": 74.3587 },
+    "population": 13541000,
+    "isCapital": false
+  },
+  {
+    "id": "dhaka",
+    "name": "Dhaka",
+    "country": "Bangladesh",
+    "timezone": "Asia/Dhaka",
+    "coordinates": { "lat": 23.8103, "lng": 90.4125 },
+    "population": 22478000,
+    "isCapital": true
+  },
+  {
+    "id": "colombo",
+    "name": "Colombo",
+    "country": "Sri Lanka",
+    "timezone": "Asia/Colombo",
+    "coordinates": { "lat": 6.9271, "lng": 79.8612 },
+    "population": 5648000,
+    "isCapital": true
+  },
+  {
+    "id": "kabul",
+    "name": "Kabul",
+    "country": "Afghanistan",
+    "timezone": "Asia/Kabul",
+    "coordinates": { "lat": 34.5553, "lng": 69.2075 },
+    "population": 4601789,
+    "isCapital": true
+  },
+  {
+    "id": "kathmandu",
+    "name": "Kathmandu",
+    "country": "Nepal",
+    "timezone": "Asia/Kathmandu",
+    "coordinates": { "lat": 27.7172, "lng": 85.3240 },
+    "population": 1442271,
+    "isCapital": true
+  },
+  {
+    "id": "thimphu",
+    "name": "Thimphu",
+    "country": "Bhutan",
+    "timezone": "Asia/Thimphu",
+    "coordinates": { "lat": 27.4728, "lng": 89.6390 },
+    "population": 115000,
+    "isCapital": true
+  },
+  {
+    "id": "bangkok",
+    "name": "Bangkok",
+    "country": "Thailand",
+    "timezone": "Asia/Bangkok",
+    "coordinates": { "lat": 13.7563, "lng": 100.5018 },
+    "population": 10156000,
+    "isCapital": true
+  },
+  {
+    "id": "kuala-lumpur",
+    "name": "Kuala Lumpur",
+    "country": "Malaysia",
+    "timezone": "Asia/Kuala_Lumpur",
+    "coordinates": { "lat": 3.1390, "lng": 101.6869 },
+    "population": 8639000,
+    "isCapital": true
+  },
+  {
+    "id": "singapore",
+    "name": "Singapore",
+    "country": "Singapore",
+    "timezone": "Asia/Singapore",
+    "coordinates": { "lat": 1.3521, "lng": 103.8198 },
+    "population": 5896000,
+    "isCapital": true
+  },
+  {
+    "id": "jakarta",
+    "name": "Jakarta",
+    "country": "Indonesia",
+    "timezone": "Asia/Jakarta",
+    "coordinates": { "lat": -6.2088, "lng": 106.8456 },
+    "population": 10770000,
+    "isCapital": true
+  },
+  {
+    "id": "ho-chi-minh",
+    "name": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "coordinates": { "lat": 10.8231, "lng": 106.6297 },
+    "population": 9321000,
+    "isCapital": false
+  },
+  {
+    "id": "hanoi",
+    "name": "Hanoi",
+    "country": "Vietnam",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "coordinates": { "lat": 21.0285, "lng": 105.8542 },
+    "population": 8246600,
+    "isCapital": true
+  },
+  {
+    "id": "phnom-penh",
+    "name": "Phnom Penh",
+    "country": "Cambodia",
+    "timezone": "Asia/Phnom_Penh",
+    "coordinates": { "lat": 11.5564, "lng": 104.9282 },
+    "population": 2281000,
+    "isCapital": true
+  },
+  {
+    "id": "vientiane",
+    "name": "Vientiane",
+    "country": "Laos",
+    "timezone": "Asia/Vientiane",
+    "coordinates": { "lat": 17.9757, "lng": 102.6331 },
+    "population": 948477,
+    "isCapital": true
+  },
+  {
+    "id": "yangon",
+    "name": "Yangon",
+    "country": "Myanmar",
+    "timezone": "Asia/Yangon",
+    "coordinates": { "lat": 16.8661, "lng": 96.1951 },
+    "population": 5610000,
+    "isCapital": false
+  },
+  {
+    "id": "naypyidaw",
+    "name": "Naypyidaw",
+    "country": "Myanmar",
+    "timezone": "Asia/Yangon",
+    "coordinates": { "lat": 19.7633, "lng": 96.0785 },
+    "population": 1160000,
+    "isCapital": true
+  },
+  {
+    "id": "hong-kong",
+    "name": "Hong Kong",
+    "country": "Hong Kong SAR",
+    "timezone": "Asia/Hong_Kong",
+    "coordinates": { "lat": 22.3193, "lng": 114.1694 },
+    "population": 7482000,
+    "isCapital": false
+  },
+  {
+    "id": "macau",
+    "name": "Macau",
+    "country": "Macau SAR",
+    "timezone": "Asia/Macau",
+    "coordinates": { "lat": 22.1987, "lng": 113.5439 },
+    "population": 682800,
+    "isCapital": false
+  },
+  {
+    "id": "taipei",
+    "name": "Taipei",
+    "country": "Taiwan",
+    "timezone": "Asia/Taipei",
+    "coordinates": { "lat": 25.0330, "lng": 121.5654 },
+    "population": 2647000,
+    "isCapital": true
+  },
+  {
+    "id": "shanghai",
+    "name": "Shanghai",
+    "country": "China",
+    "timezone": "Asia/Shanghai",
+    "coordinates": { "lat": 31.2304, "lng": 121.4737 },
+    "population": 28516904,
+    "isCapital": false
+  },
+  {
+    "id": "beijing",
+    "name": "Beijing",
+    "country": "China",
+    "timezone": "Asia/Shanghai",
+    "coordinates": { "lat": 39.9042, "lng": 116.4074 },
+    "population": 21542000,
+    "isCapital": true
+  },
+  {
+    "id": "shenzhen",
+    "name": "Shenzhen",
+    "country": "China",
+    "timezone": "Asia/Shanghai",
+    "coordinates": { "lat": 22.5431, "lng": 114.0579 },
+    "population": 17560000,
+    "isCapital": false
+  },
+  {
+    "id": "guangzhou",
+    "name": "Guangzhou",
+    "country": "China",
+    "timezone": "Asia/Shanghai",
+    "coordinates": { "lat": 23.1291, "lng": 113.2644 },
+    "population": 15300000,
+    "isCapital": false
+  },
+  {
+    "id": "chengdu",
+    "name": "Chengdu",
+    "country": "China",
+    "timezone": "Asia/Shanghai",
+    "coordinates": { "lat": 30.5728, "lng": 104.0668 },
+    "population": 20938000,
+    "isCapital": false
+  },
+  {
+    "id": "tokyo",
+    "name": "Tokyo",
+    "country": "Japan", 
+    "timezone": "Asia/Tokyo",
+    "coordinates": { "lat": 35.6762, "lng": 139.6503 },
+    "population": 13960000,
+    "isCapital": true
+  },
+  {
+    "id": "osaka",
+    "name": "Osaka",
+    "country": "Japan",
+    "timezone": "Asia/Tokyo",
+    "coordinates": { "lat": 34.6937, "lng": 135.5023 },
+    "population": 2691000,
+    "isCapital": false
+  },
+  {
+    "id": "kyoto",
+    "name": "Kyoto",
+    "country": "Japan",
+    "timezone": "Asia/Tokyo",
+    "coordinates": { "lat": 35.0116, "lng": 135.7681 },
+    "population": 1465000,
+    "isCapital": false
+  },
+  {
+    "id": "seoul",
+    "name": "Seoul",
+    "country": "South Korea",
+    "timezone": "Asia/Seoul",
+    "coordinates": { "lat": 37.5665, "lng": 126.9780 },
+    "population": 9720846,
+    "isCapital": true
+  },
+  {
+    "id": "busan",
+    "name": "Busan",
+    "country": "South Korea",
+    "timezone": "Asia/Seoul",
+    "coordinates": { "lat": 35.1796, "lng": 129.0756 },
+    "population": 3423000,
+    "isCapital": false
+  },
+  {
+    "id": "pyongyang",
+    "name": "Pyongyang",
+    "country": "North Korea",
+    "timezone": "Asia/Pyongyang",
+    "coordinates": { "lat": 39.0392, "lng": 125.7625 },
+    "population": 3038000,
+    "isCapital": true
+  },
+  {
+    "id": "manila",
+    "name": "Manila",
+    "country": "Philippines",
+    "timezone": "Asia/Manila",
+    "coordinates": { "lat": 14.5995, "lng": 120.9842 },
+    "population": 13482462,
+    "isCapital": true
+  },
+  {
+    "id": "cebu",
+    "name": "Cebu",
+    "country": "Philippines",
+    "timezone": "Asia/Manila",
+    "coordinates": { "lat": 10.3157, "lng": 123.8854 },
+    "population": 2849213,
+    "isCapital": false
+  },
+  {
+    "id": "sydney",
+    "name": "Sydney",
+    "country": "Australia",
+    "timezone": "Australia/Sydney", 
+    "coordinates": { "lat": -33.8688, "lng": 151.2093 },
+    "population": 5312000,
+    "isCapital": false
+  },
+  {
+    "id": "melbourne",
+    "name": "Melbourne",
+    "country": "Australia",
+    "timezone": "Australia/Melbourne",
+    "coordinates": { "lat": -37.8136, "lng": 144.9631 },
+    "population": 5159211,
+    "isCapital": false
+  },
+  {
+    "id": "brisbane",
+    "name": "Brisbane",
+    "country": "Australia",
+    "timezone": "Australia/Brisbane",
+    "coordinates": { "lat": -27.4698, "lng": 153.0251 },
+    "population": 2560720,
+    "isCapital": false
+  },
+  {
+    "id": "perth",
+    "name": "Perth",
+    "country": "Australia",
+    "timezone": "Australia/Perth",
+    "coordinates": { "lat": -31.9505, "lng": 115.8605 },
+    "population": 2192229,
+    "isCapital": false
+  },
+  {
+    "id": "adelaide",
+    "name": "Adelaide",
+    "country": "Australia",
+    "timezone": "Australia/Adelaide",
+    "coordinates": { "lat": -34.9285, "lng": 138.6007 },
+    "population": 1402393,
+    "isCapital": false
+  },
+  {
+    "id": "canberra",
+    "name": "Canberra",
+    "country": "Australia",
+    "timezone": "Australia/Sydney",
+    "coordinates": { "lat": -35.2809, "lng": 149.1300 },
+    "population": 457030,
+    "isCapital": true
+  },
+  {
+    "id": "darwin",
+    "name": "Darwin",
+    "country": "Australia",
+    "timezone": "Australia/Darwin",
+    "coordinates": { "lat": -12.4634, "lng": 130.8456 },
+    "population": 147255,
+    "isCapital": false
+  },
+  {
+    "id": "auckland",
+    "name": "Auckland",
+    "country": "New Zealand",
+    "timezone": "Pacific/Auckland",
+    "coordinates": { "lat": -36.8485, "lng": 174.7633 },
+    "population": 1657200,
+    "isCapital": false
+  },
+  {
+    "id": "wellington",
+    "name": "Wellington",
+    "country": "New Zealand",
+    "timezone": "Pacific/Auckland",
+    "coordinates": { "lat": -41.2924, "lng": 174.7787 },
+    "population": 418500,
+    "isCapital": true
+  },
+  {
+    "id": "christchurch",
+    "name": "Christchurch",
+    "country": "New Zealand",
+    "timezone": "Pacific/Auckland",
+    "coordinates": { "lat": -43.5321, "lng": 172.6362 },
+    "population": 381500,
+    "isCapital": false
+  },
+  {
+    "id": "suva",
+    "name": "Suva",
+    "country": "Fiji",
+    "timezone": "Pacific/Fiji",
+    "coordinates": { "lat": -18.1248, "lng": 178.4501 },
+    "population": 93970,
+    "isCapital": true
+  },
+  {
+    "id": "port-moresby",
+    "name": "Port Moresby",
+    "country": "Papua New Guinea",
+    "timezone": "Pacific/Port_Moresby",
+    "coordinates": { "lat": -9.4438, "lng": 147.1803 },
+    "population": 410954,
+    "isCapital": true
+  },
+  {
+    "id": "honolulu",
+    "name": "Honolulu",
+    "country": "United States",
+    "timezone": "Pacific/Honolulu",
+    "coordinates": { "lat": 21.3099, "lng": -157.8581 },
+    "population": 350964,
+    "isCapital": false
+  },
+  {
+    "id": "anchorage",
+    "name": "Anchorage",
+    "country": "United States",
+    "timezone": "America/Anchorage",
+    "coordinates": { "lat": 61.2181, "lng": -149.9003 },
+    "population": 291538,
+    "isCapital": false
+  },
+  {
+    "id": "fairbanks",
+    "name": "Fairbanks",
+    "country": "United States",
+    "timezone": "America/Anchorage",
+    "coordinates": { "lat": 64.8378, "lng": -147.7164 },
+    "population": 32515,
+    "isCapital": false
+  }
+]

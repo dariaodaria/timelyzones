@@ -1,0 +1,38 @@
+[
+  {
+    "from": "new-york",
+    "to": "london",
+    "slug": "new-york-to-london",
+    "searchVolume": 12000
+  },
+  {
+    "from": "los-angeles",
+    "to": "new-york",
+    "slug": "los-angeles-to-new-york",
+    "searchVolume": 8500
+  },
+  {
+    "from": "london",
+    "to": "tokyo",
+    "slug": "london-to-tokyo",
+    "searchVolume": 6200
+  },
+  {
+    "from": "new-york",
+    "to": "tokyo",
+    "slug": "new-york-to-tokyo",
+    "searchVolume": 5800
+  },
+  {
+    "from": "london",
+    "to": "sydney",
+    "slug": "london-to-sydney",
+    "searchVolume": 4100
+  },
+  {
+    "from": "singapore",
+    "to": "new-york",
+    "slug": "singapore-to-new-york",
+    "searchVolume": 3700
+  }
+]

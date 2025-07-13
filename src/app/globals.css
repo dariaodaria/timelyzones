@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 37 99 235;      /* blue-600 */
+  --secondary: 100 116 139;  /* slate-500 */
+  --accent: 5 150 105;       /* emerald-600 */
+  --background: 255 255 255;
+  --foreground: 15 23 42;    /* slate-900 */
+  --muted: 248 250 252;      /* slate-50 */
+  --border: 226 232 240;     /* slate-200 */
+}
+
+.dark {
+  --primary: 59 130 246;     /* blue-500 */
+  --secondary: 148 163 184;  /* slate-400 */
+  --accent: 16 185 129;      /* emerald-500 */
+  --background: 15 23 42;    /* slate-900 */
+  --foreground: 248 250 252; /* slate-50 */
+  --muted: 30 41 59;         /* slate-800 */
+  --border: 51 65 85;        /* slate-700 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Simple dark mode fix for time input */
+  .dark input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
