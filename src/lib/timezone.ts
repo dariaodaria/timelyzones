@@ -208,7 +208,9 @@ export function convertTimeBetweenCities(
   // Cleanup old cache entries (keep only last 100)
   if (conversionCache.size > 100) {
     const firstKey = conversionCache.keys().next().value
-    conversionCache.delete(firstKey)
+    if (firstKey) {
+      conversionCache.delete(firstKey)
+    }
   }
   
   return conversion
