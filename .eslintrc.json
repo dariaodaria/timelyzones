@@ -1,9 +1,6 @@
 {
-  "extends": ["next/core-web-vitals"],
+  "extends": "next",
   "rules": {
-    "prefer-const": "error",
-    "no-unused-vars": "warn",
-    "no-console": "warn",
     "react/no-unescaped-entities": "off"
   }
 }
