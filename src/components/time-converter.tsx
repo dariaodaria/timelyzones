@@ -186,8 +186,8 @@ export function TimeConverter({
       })
       setResults(newResults)
       
-      // Track timezone conversion
-      if (debouncedToCities.length > 0) {
+      // Track timezone conversion (only on client side)
+      if (debouncedToCities.length > 0 && typeof window !== 'undefined') {
         trackConversion(
           debouncedFromCity.name,
           debouncedToCities.map(city => city.name).join(', '),
@@ -211,8 +211,10 @@ export function TimeConverter({
       setFromCity(toCities[0])
       setToCities([temp])
       
-      // Track swap feature usage
-      trackFeatureUsage('swap_cities', `${toCities[0].name} <-> ${fromCity.name}`)
+      // Track swap feature usage (only on client side)
+      if (typeof window !== 'undefined') {
+        trackFeatureUsage('swap_cities', `${toCities[0].name} <-> ${fromCity.name}`)
+      }
     }
   }, [fromCity, toCities, trackFeatureUsage])
 
@@ -226,8 +228,10 @@ export function TimeConverter({
       setCopySuccess(true)
       setTimeout(() => setCopySuccess(false), 2000)
       
-      // Track copy link feature usage
-      trackFeatureUsage('copy_link', `${fromCity.name} to ${toCities.map(c => c.name).join(', ')}`)
+      // Track copy link feature usage (only on client side)
+      if (typeof window !== 'undefined') {
+        trackFeatureUsage('copy_link', `${fromCity.name} to ${toCities.map(c => c.name).join(', ')}`)
+      }
     } catch (error) {
       console.error('Failed to copy:', error)
       // Fallback for older browsers
@@ -240,8 +244,10 @@ export function TimeConverter({
       setCopySuccess(true)
       setTimeout(() => setCopySuccess(false), 2000)
       
-      // Track copy link feature usage (fallback method)
-      trackFeatureUsage('copy_link_fallback', `${fromCity.name} to ${toCities.map(c => c.name).join(', ')}`)
+      // Track copy link feature usage (fallback method, only on client side)
+      if (typeof window !== 'undefined') {
+        trackFeatureUsage('copy_link_fallback', `${fromCity.name} to ${toCities.map(c => c.name).join(', ')}`)
+      }
     }
   }, [selectedTime, toCities, fromCity, trackFeatureUsage])
 
@@ -281,8 +287,8 @@ export function TimeConverter({
       const updated = [...prev]
       updated[index] = newCity
       
-      // Track when user selects first destination city
-      if (index === 0 && prev.length === 0) {
+      // Track when user selects first destination city (only on client side)
+      if (index === 0 && prev.length === 0 && typeof window !== 'undefined') {
         trackFeatureUsage('first_destination_selected', newCity.name)
       }
       
@@ -378,8 +384,10 @@ export function TimeConverter({
                     value={null}
                     onChange={(city) => {
                       setToCities([city])
-                      // Track first destination selection
-                      trackFeatureUsage('first_destination_selected', city.name)
+                      // Track first destination selection (only on client side)
+                      if (typeof window !== 'undefined') {
+                        trackFeatureUsage('first_destination_selected', city.name)
+                      }
                     }}
                     excludeCities={[fromCity]}
                     placeholder="Select destination timezone..."

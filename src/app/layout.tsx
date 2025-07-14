@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     viewportFit: 'cover'
   },
   robots: 'index, follow',
-  manifest: '/manifest.json',
+  // manifest: '/manifest.json', // Disabled temporarily to prevent icon errors
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',

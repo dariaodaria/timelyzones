@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from 'react'
+import { useEffect, useCallback } from 'react'
 
 interface AnalyticsEvent {
   action: string
@@ -21,9 +21,12 @@ declare global {
 }
 
 export function useAnalytics() {
-  const trackEvent = (event: AnalyticsEvent) => {
+  const trackEvent = useCallback((event: AnalyticsEvent) => {
+    // Only track on client side
+    if (typeof window === 'undefined') return
+    
     // Google Analytics 4
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (window.gtag) {
       window.gtag('event', event.action, {
         event_category: event.category,
         event_label: event.label,
@@ -31,38 +34,38 @@ export function useAnalytics() {
       })
     }
 
-    // Console logging in development
+    // Console logging in development only
     if (process.env.NODE_ENV === 'development') {
       console.log('📊 Analytics Event:', event)
     }
-  }
+  }, [])
 
-  const trackConversion = (fromCity: string, toCity: string, timeSet: string) => {
+  const trackConversion = useCallback((fromCity: string, toCity: string, timeSet: string) => {
     trackEvent({
       action: 'timezone_conversion',
       category: 'conversions',
       label: `${fromCity}_to_${toCity}`,
       value: 1
     })
-  }
+  }, [trackEvent])
 
-  const trackFeatureUsage = (feature: string, details?: string) => {
+  const trackFeatureUsage = useCallback((feature: string, details?: string) => {
     trackEvent({
       action: 'feature_used',
       category: 'features',
       label: feature,
       value: 1
     })
-  }
+  }, [trackEvent])
 
-  const trackError = (error: string, component: string) => {
+  const trackError = useCallback((error: string, component: string) => {
     trackEvent({
       action: 'error_encountered',
       category: 'errors',
       label: `${component}: ${error}`,
       value: 1
     })
-  }
+  }, [trackEvent])
 
   return {
     trackEvent,
@@ -75,7 +78,12 @@ export function useAnalytics() {
 // Google Analytics component
 export function GoogleAnalytics({ gaId }: { gaId: string }) {
   useEffect(() => {
+    // Only run on client side
     if (!gaId || typeof window === 'undefined') return
+
+    // Check if script already exists
+    const existingScript = document.querySelector(`script[src*="gtag/js?id=${gaId}"]`)
+    if (existingScript) return
 
     // Load Google Analytics script
     const script = document.createElement('script')
@@ -97,15 +105,9 @@ export function GoogleAnalytics({ gaId }: { gaId: string }) {
       page_location: window.location.href,
     })
 
-    // Log successful initialization
-    console.log('📊 Google Analytics initialized with ID:', gaId)
-
-    return () => {
-      // Cleanup: remove script if component unmounts
-      const existingScript = document.querySelector(`script[src*="${gaId}"]`)
-      if (existingScript) {
-        document.head.removeChild(existingScript)
-      }
+    // Log successful initialization only in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('📊 Google Analytics initialized with ID:', gaId)
     }
   }, [gaId])
 
