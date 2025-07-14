@@ -109,7 +109,15 @@ export default function HomePage() {
               <Link 
                 key={`${conversion.from}-${conversion.to}`}
                 href={conversion.path}
-                className="p-3 bg-white dark:bg-slate-800 border border-border rounded-lg hover:shadow-md transition-shadow text-sm font-medium text-center"
+                className="block p-3 bg-white dark:bg-slate-800 border border-border rounded-lg hover:shadow-md hover:bg-primary/5 transition-all text-sm font-medium text-center cursor-pointer relative z-10"
+                style={{ pointerEvents: 'auto' }}
+                onClick={(e) => {
+                  console.log('Clicked:', conversion.path)
+                  // Fallback: force navigation if Link fails
+                  if (e.metaKey || e.ctrlKey) return // Allow new tab
+                  e.preventDefault()
+                  window.location.href = conversion.path
+                }}
               >
                 {conversion.from} → {conversion.to}
               </Link>
