@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { ErrorBoundary } from '@/components/error-boundary'
+import { GoogleAnalytics, PerformanceMonitor } from '@/components/analytics'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -100,6 +101,10 @@ export default function RootLayout({
               </div>
             </div>
           </footer>
+          
+          {/* Google Analytics */}
+          <GoogleAnalytics gaId="G-BL6LMLT710" />
+          <PerformanceMonitor />
         </ErrorBoundary>
       </body>
     </html>

@@ -75,7 +75,7 @@ export function useAnalytics() {
 // Google Analytics component
 export function GoogleAnalytics({ gaId }: { gaId: string }) {
   useEffect(() => {
-    if (!gaId) return
+    if (!gaId || typeof window === 'undefined') return
 
     // Load Google Analytics script
     const script = document.createElement('script')
@@ -97,8 +97,15 @@ export function GoogleAnalytics({ gaId }: { gaId: string }) {
       page_location: window.location.href,
     })
 
+    // Log successful initialization
+    console.log('📊 Google Analytics initialized with ID:', gaId)
+
     return () => {
-      document.head.removeChild(script)
+      // Cleanup: remove script if component unmounts
+      const existingScript = document.querySelector(`script[src*="${gaId}"]`)
+      if (existingScript) {
+        document.head.removeChild(existingScript)
+      }
     }
   }, [gaId])
 

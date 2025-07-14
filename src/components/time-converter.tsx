@@ -6,6 +6,7 @@ import { getCities, convertTimeBetweenCities, getCityBySlug } from '@/lib/timezo
 import { formatTime, cn } from '@/lib/utils'
 import { CitySearchDropdown } from './city-search-dropdown'
 import { LoadingSpinner, TimeDisplaySkeleton } from './ui/loading'
+import { useAnalytics } from './analytics'
 import type { City, TimezoneConversion } from '@/lib/timezone'
 
 interface LocationResult {
@@ -118,6 +119,9 @@ export function TimeConverter({
   const [error, setError] = useState<string | null>(null)
   const [isClient, setIsClient] = useState(false)
 
+  // Initialize analytics
+  const { trackConversion, trackFeatureUsage } = useAnalytics()
+
   // Detect user's timezone after component mounts (client-side only)
   useEffect(() => {
     setIsClient(true)
@@ -149,6 +153,19 @@ export function TimeConverter({
     return [fromCity, ...validToCities]
   }, [fromCity, toCities])
 
+  const timeInputRef = useRef<HTMLInputElement>(null)
+
+  const formatTimeInput = useCallback((date: Date): string => {
+    return `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`
+  }, [])
+
+  const handleTimeInputClick = useCallback(() => {
+    if (timeInputRef.current) {
+      timeInputRef.current.focus()
+      timeInputRef.current.showPicker?.()
+    }
+  }, [])
+
   // PERFORMANCE FIX: Optimized calculateResults (removed async/await)
   const calculateResults = useCallback(() => {
     try {
@@ -168,11 +185,20 @@ export function TimeConverter({
         }
       })
       setResults(newResults)
+      
+      // Track timezone conversion
+      if (debouncedToCities.length > 0) {
+        trackConversion(
+          debouncedFromCity.name,
+          debouncedToCities.map(city => city.name).join(', '),
+          formatTimeInput(debouncedSelectedTime)
+        )
+      }
     } catch (err) {
       setError('Failed to convert times. Please try again.')
       console.error('Timezone conversion error:', err)
     }
-  }, [debouncedFromCity, debouncedToCities, debouncedSelectedTime])
+  }, [debouncedFromCity, debouncedToCities, debouncedSelectedTime, trackConversion, formatTimeInput])
 
   // PERFORMANCE FIX: Use debounced values for calculations
   useEffect(() => {
@@ -184,8 +210,11 @@ export function TimeConverter({
       const temp = fromCity
       setFromCity(toCities[0])
       setToCities([temp])
+      
+      // Track swap feature usage
+      trackFeatureUsage('swap_cities', `${toCities[0].name} <-> ${fromCity.name}`)
     }
-  }, [fromCity, toCities])
+  }, [fromCity, toCities, trackFeatureUsage])
 
   const handleCopyLink = useCallback(async () => {
     try {
@@ -196,6 +225,9 @@ export function TimeConverter({
       await navigator.clipboard.writeText(url)
       setCopySuccess(true)
       setTimeout(() => setCopySuccess(false), 2000)
+      
+      // Track copy link feature usage
+      trackFeatureUsage('copy_link', `${fromCity.name} to ${toCities.map(c => c.name).join(', ')}`)
     } catch (error) {
       console.error('Failed to copy:', error)
       // Fallback for older browsers
@@ -207,8 +239,11 @@ export function TimeConverter({
       document.body.removeChild(textArea)
       setCopySuccess(true)
       setTimeout(() => setCopySuccess(false), 2000)
+      
+      // Track copy link feature usage (fallback method)
+      trackFeatureUsage('copy_link_fallback', `${fromCity.name} to ${toCities.map(c => c.name).join(', ')}`)
     }
-  }, [selectedTime, toCities, fromCity])
+  }, [selectedTime, toCities, fromCity, trackFeatureUsage])
 
   const handleTimeChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     try {
@@ -222,19 +257,6 @@ export function TimeConverter({
       console.error('Invalid time input:', err)
     }
   }, [selectedTime])
-
-  const timeInputRef = useRef<HTMLInputElement>(null)
-
-  const handleTimeInputClick = useCallback(() => {
-    if (timeInputRef.current) {
-      timeInputRef.current.focus()
-      timeInputRef.current.showPicker?.()
-    }
-  }, [])
-
-  const formatTimeInput = useCallback((date: Date): string => {
-    return `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`
-  }, [])
 
   // PERFORMANCE FIX: Optimized addToCity function
   const addToCity = useCallback(() => {
@@ -258,9 +280,15 @@ export function TimeConverter({
     setToCities(prev => {
       const updated = [...prev]
       updated[index] = newCity
+      
+      // Track when user selects first destination city
+      if (index === 0 && prev.length === 0) {
+        trackFeatureUsage('first_destination_selected', newCity.name)
+      }
+      
       return updated
     })
-  }, [])
+  }, [trackFeatureUsage])
 
   const getTimeDisplayClasses = useCallback((isGoodTime: boolean) => {
     return cn(
@@ -348,7 +376,11 @@ export function TimeConverter({
                 <div className="sm:col-span-8">
                   <CitySearchDropdown
                     value={null}
-                    onChange={(city) => setToCities([city])}
+                    onChange={(city) => {
+                      setToCities([city])
+                      // Track first destination selection
+                      trackFeatureUsage('first_destination_selected', city.name)
+                    }}
                     excludeCities={[fromCity]}
                     placeholder="Select destination timezone..."
                   />
