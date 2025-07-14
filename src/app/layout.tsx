@@ -45,7 +45,8 @@ export const metadata: Metadata = {
     'apple-mobile-web-app-title': 'TimelyZones',
     'application-name': 'TimelyZones',
     'msapplication-TileColor': '#2563eb',
-    'theme-color': '#2563eb'
+    'theme-color': '#2563eb',
+    'google-site-verification': 'gKfsELv_2U3MpKuRO5H_i73PgGurfoCd9o6pHrIuZRs'
   }
 }
 
