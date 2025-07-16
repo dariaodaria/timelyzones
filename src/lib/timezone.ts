@@ -166,8 +166,141 @@ export function getCities(): City[] {
   return memoizedCities
 }
 
+// City aliases for common abbreviations
+const cityAliases: Record<string, string> = {
+  'la': 'los-angeles',
+  'sf': 'san-francisco',
+  'nyc': 'new-york',
+  'dc': 'washington-dc',
+  'chi': 'chicago',
+  'phx': 'phoenix',
+  'mia': 'miami',
+  'sea': 'seattle',
+  'pdx': 'portland',
+  'van': 'vancouver',
+  'tor': 'toronto',
+  'mtl': 'montreal',
+  'yyc': 'calgary',
+  'mex': 'mexico-city',
+  'sp': 'sao-paulo',
+  'rio': 'rio-de-janeiro',
+  'ba': 'buenos-aires',
+  'lon': 'london',
+  'par': 'paris',
+  'ber': 'berlin',
+  'mad': 'madrid',
+  'ams': 'amsterdam',
+  'zur': 'zurich',
+  'sto': 'stockholm',
+  'cop': 'copenhagen',
+  'hel': 'helsinki',
+  'dub': 'dublin',
+  'lis': 'lisbon',
+  'war': 'warsaw',
+  'pra': 'prague',
+  'bud': 'budapest',
+  'buc': 'bucharest',
+  'ath': 'athens',
+  'mos': 'moscow',
+  'ist': 'istanbul',
+  'zag': 'zagreb',
+  'bel': 'belgrade',
+  'lju': 'ljubljana',
+  'kiv': 'kiev',
+  'cai': 'cairo',
+  'cas': 'casablanca',
+  'tun': 'tunis',
+  'lag': 'lagos',
+  'acc': 'accra',
+  'nai': 'nairobi',
+  'jnb': 'johannesburg',
+  'cpt': 'cape-town',
+  'riy': 'riyadh',
+  'dub': 'dubai',
+  'doh': 'doha',
+  'kuw': 'kuwait-city',
+  'bah': 'manama',
+  'mct': 'muscat',
+  'teh': 'tehran',
+  'bag': 'baghdad',
+  'dam': 'damascus',
+  'bei': 'beirut',
+  'amm': 'amman',
+  'jer': 'jerusalem',
+  'tlv': 'tel-aviv',
+  'del': 'delhi',
+  'bom': 'mumbai',
+  'blr': 'bangalore',
+  'cal': 'kolkata',
+  'maa': 'chennai',
+  'hyd': 'hyderabad',
+  'pun': 'pune',
+  'isb': 'islamabad',
+  'khi': 'karachi',
+  'lhe': 'lahore',
+  'dac': 'dhaka',
+  'cmb': 'colombo',
+  'kab': 'kabul',
+  'ktm': 'kathmandu',
+  'thi': 'thimphu',
+  'bkk': 'bangkok',
+  'kul': 'kuala-lumpur',
+  'sin': 'singapore',
+  'jkt': 'jakarta',
+  'sgn': 'ho-chi-minh',
+  'han': 'hanoi',
+  'pnh': 'phnom-penh',
+  'vte': 'vientiane',
+  'rgn': 'yangon',
+  'npt': 'naypyidaw',
+  'hkg': 'hong-kong',
+  'mac': 'macau',
+  'tpe': 'taipei',
+  'sha': 'shanghai',
+  'pek': 'beijing',
+  'szx': 'shenzhen',
+  'can': 'guangzhou',
+  'ctu': 'chengdu',
+  'nrt': 'tokyo',
+  'kix': 'osaka',
+  'kyo': 'kyoto',
+  'sel': 'seoul',
+  'pus': 'busan',
+  'pyp': 'pyongyang',
+  'mnl': 'manila',
+  'ceb': 'cebu',
+  'syd': 'sydney',
+  'mel': 'melbourne',
+  'bne': 'brisbane',
+  'per': 'perth',
+  'adl': 'adelaide',
+  'cbr': 'canberra',
+  'dar': 'darwin',
+  'akl': 'auckland',
+  'wlg': 'wellington',
+  'chc': 'christchurch',
+  'suv': 'suva',
+  'pom': 'port-moresby',
+  'hnl': 'honolulu',
+  'anc': 'anchorage',
+  'fai': 'fairbanks'
+}
+
 export function getCityBySlug(slug: string): City | undefined {
-  return getCities().find(city => city.id === slug)
+  // Add null/undefined check
+  if (!slug) return undefined
+  
+  // First try the original slug
+  const directMatch = getCities().find(city => city.id === slug)
+  if (directMatch) return directMatch
+  
+  // Then try with alias
+  const aliasSlug = cityAliases[slug.toLowerCase()]
+  if (aliasSlug) {
+    return getCities().find(city => city.id === aliasSlug)
+  }
+  
+  return undefined
 }
 
 export function getCityByName(name: string): City | undefined {

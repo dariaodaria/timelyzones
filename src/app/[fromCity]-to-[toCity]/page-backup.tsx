@@ -1,3 +1,4 @@
+// Backup of original file
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { TimeConverter } from '@/components/time-converter'
@@ -7,9 +8,66 @@ import Link from 'next/link'
 import { ArrowLeft, Clock, Globe } from 'lucide-react'
 
 interface ConversionPageProps {
-  params: any
+  params: {
+    fromCity: string
+    toCity: string
+  }
   searchParams: {
     at?: string
+  }
+}
+
+export async function generateMetadata({ 
+  params 
+}: ConversionPageProps): Promise<Metadata> {
+  const fromCity = getCityBySlug(params.fromCity)
+  const toCity = getCityBySlug(params.toCity)
+  
+  if (!fromCity || !toCity) {
+    return {
+      title: 'City Not Found - TimelyZones',
+      description: 'The requested city conversion page could not be found. Please check the city names and try again.',
+      robots: {
+        index: false,
+        follow: false,
+      },
+    }
+  }
+
+  const fromTz = getTimezoneAbbreviation(fromCity)
+  const toTz = getTimezoneAbbreviation(toCity)
+  
+  const title = `${fromCity.name} to ${toCity.name} Time Converter - ${fromTz} to ${toTz}`
+  const description = `Convert time from ${fromCity.name}, ${fromCity.country} (${fromTz}) to ${toCity.name}, ${toCity.country} (${toTz}). Fast, accurate timezone conversion with business hours awareness.`
+  
+  return {
+    title,
+    description,
+    keywords: [
+      'time conversion',
+      `${fromCity.name} to ${toCity.name}`,
+      `${fromTz} to ${toTz}`,
+      'timezone converter',
+      'world clock',
+      fromCity.name,
+      toCity.name,
+      fromTz,
+      toTz
+    ],
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url: `https://timelyzones.com/${params.fromCity}-to-${params.toCity}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: `https://timelyzones.com/${params.fromCity}-to-${params.toCity}`,
+    }
   }
 }
 
@@ -17,37 +75,10 @@ export default function ConversionPage({
   params, 
   searchParams 
 }: ConversionPageProps) {
-  console.log('All params:', params)
-  
-  // Get the actual parameter value 
-  const routeValue = params['fromCity]-to-[toCity']
-  console.log('Route value:', routeValue)
-  
-  if (!routeValue) {
-    notFound()
-  }
-  
-  // Parse "la-to-tokyo" into fromCity and toCity
-  const match = routeValue.match(/^(.+)-to-(.+)$/)
-  
-  if (!match) {
-    notFound()
-  }
-  
-  const [, fromCitySlug, toCitySlug] = match
-  console.log('Parsed slugs:', { fromCitySlug, toCitySlug })
-  
-  // Look up cities using the alias system
-  const fromCity = getCityBySlug(fromCitySlug)
-  const toCity = getCityBySlug(toCitySlug)
-  
-  console.log('Found cities:', { 
-    fromCity: fromCity?.name, 
-    toCity: toCity?.name 
-  })
+  const fromCity = getCityBySlug(params.fromCity)
+  const toCity = getCityBySlug(params.toCity)
   
   if (!fromCity || !toCity) {
-    console.log('Cities not found - redirecting to 404')
     notFound()
   }
 
@@ -55,7 +86,7 @@ export default function ConversionPage({
   const toTz = getTimezoneAbbreviation(toCity)
   
   // Parse time from URL parameter
-  const selectedTime = searchParams?.at ? parseTimeParam(searchParams.at) : new Date()
+  const selectedTime = searchParams.at ? parseTimeParam(searchParams.at) : new Date()
 
   return (
     <main className="min-h-screen">
@@ -195,19 +226,15 @@ function parseTimeParam(timeParam: string): Date {
 }
 
 function calculateTimeDifference(fromCity: any, toCity: any): string {
-  try {
-    const now = new Date()
-    const fromTime = new Date(now.toLocaleString('en-US', { timeZone: fromCity.timezone }))
-    const toTime = new Date(now.toLocaleString('en-US', { timeZone: toCity.timezone }))
-    
-    const diffInHours = Math.round((toTime.getTime() - fromTime.getTime()) / (1000 * 60 * 60))
-    
-    if (diffInHours === 0) return 'Same time'
-    if (diffInHours > 0) return `${diffInHours} hours ahead`
-    return `${Math.abs(diffInHours)} hours behind`
-  } catch (error) {
-    return 'Unable to calculate'
-  }
+  const now = new Date()
+  const fromTime = new Date(now.toLocaleString('en-US', { timeZone: fromCity.timezone }))
+  const toTime = new Date(now.toLocaleString('en-US', { timeZone: toCity.timezone }))
+  
+  const diffInHours = Math.round((toTime.getTime() - fromTime.getTime()) / (1000 * 60 * 60))
+  
+  if (diffInHours === 0) return 'Same time'
+  if (diffInHours > 0) return `${diffInHours} hours ahead`
+  return `${Math.abs(diffInHours)} hours behind`
 }
 
 function getRelatedConversions(fromCity: any, toCity: any) {

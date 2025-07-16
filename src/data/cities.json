@@ -81,6 +81,24 @@
     "isCapital": false
   },
   {
+    "id": "san-francisco",
+    "name": "San Francisco",
+    "country": "United States",
+    "timezone": "America/Los_Angeles",
+    "coordinates": { "lat": 37.7749, "lng": -122.4194 },
+    "population": 873965,
+    "isCapital": false
+  },
+  {
+    "id": "portland",
+    "name": "Portland",
+    "country": "United States",
+    "timezone": "America/Los_Angeles",
+    "coordinates": { "lat": 45.5152, "lng": -122.6784 },
+    "population": 652503,
+    "isCapital": false
+  },
+  {
     "id": "vancouver",
     "name": "Vancouver",
     "country": "Canada",

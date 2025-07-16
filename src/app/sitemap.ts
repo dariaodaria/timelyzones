@@ -18,7 +18,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'paris-to-new-york',
     'singapore-to-london',
     'sydney-to-london',
-    'tokyo-to-los-angeles'
+    'tokyo-to-los-angeles',
+    // Phase 1: Top 10 Business Corridors
+    'san-francisco-to-london',
+    'new-york-to-hong-kong',
+    'london-to-singapore',
+    'new-york-to-berlin',
+    'london-to-mumbai',
+    'new-york-to-singapore',
+    'new-york-to-amsterdam',
+    'san-francisco-to-singapore',
+    'toronto-to-new-york',
+    'vancouver-to-seattle',
+    // Previous Pacific conversion pages
+    'tokyo-to-san-francisco',
+    'los-angeles-to-osaka',
+    'tokyo-to-seattle',
+    'los-angeles-to-seoul'
   ]
   
   // Popular timezone combinations (additional SEO pages)
