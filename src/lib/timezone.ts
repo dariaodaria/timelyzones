@@ -216,7 +216,7 @@ const cityAliases: Record<string, string> = {
   'jnb': 'johannesburg',
   'cpt': 'cape-town',
   'riy': 'riyadh',
-  'dub': 'dubai',
+  'dxb': 'dubai',
   'doh': 'doha',
   'kuw': 'kuwait-city',
   'bah': 'manama',
